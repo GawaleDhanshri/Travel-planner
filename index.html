@@ -1,0 +1,51 @@
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Activity Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="client.js" defer></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD3eTcxei4M_JgdKlDBnU5c0bJyCowpbI&callback=initMap"></script>
+</head>
+<body>
+    <header>
+        <h1>Travel Activity Planner</h1>
+    </header>
+    <main>
+        <form id="preferencesForm">
+            <div class="input-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="Enter city" required>
+            </div>
+            <div class="input-group">
+                <label for="interests">Interests:</label>
+                <input type="text" id="interests" name="interests" placeholder="e.g., museums, parks" required>
+            </div>
+            <div class="input-group">
+                <label for="budget">Budget:</label>
+                <input type="text" id="budget" name="budget" placeholder="e.g., low, medium, high" required>
+            </div>
+            <div class="input-group">
+                <label for="travel_date">Travel Date:</label>
+                <input type="date" id="travel_date" name="travel_date" required>
+            </div>
+            <button type="submit">Save Preferences</button>
+        </form>
+
+        <hr>
+
+        <form id="itineraryForm">
+            <button type="submit">Generate Itinerary</button>
+        </form>
+
+        <h2>Your Planned Itinerary</h2>
+        <div id="itineraryResults"></div>
+    </main>
+    <footer>
+        <p>Additional links and resources here</p>
+    </footer>
+</body>
+</html>
+
